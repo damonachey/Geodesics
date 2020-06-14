@@ -9,6 +9,7 @@ import { Cone } from "./shapes/cone";
 import { Cube } from "./shapes/cube";
 import { Sphere } from "./shapes/sphere";
 import { Mobius } from "./shapes/mobius";
+import { Geodesic } from "./shapes/geodesic";
 
 import { Utilities } from "./utilities";
 import { Geometry } from "./geometry";
@@ -24,7 +25,7 @@ function draw() {
 
 function update(progress) {
   const π = Math.PI;
-  const q = Quaternion.createFromYawPitchRoll(π / 400, π / 500, π / 600);
+  const q = Quaternion.createFromYawPitchRoll(π / 4000, π / 5000, π / 6000);
 
   for (const shape of shapes) shape.transform(q);
 }
@@ -34,18 +35,9 @@ Canvas.initialize("canvas");
 Shape.initialize("canvas");
 
 const shapes = [
-  Axis.create((Canvas.canvas.width * 1) / 10, Canvas.canvas.height / 2, 0, 100),
-  Cone.create((Canvas.canvas.width * 3) / 10, Canvas.canvas.height / 2, 0, 100),
-  Cube.create((Canvas.canvas.width * 5) / 10, Canvas.canvas.height / 2, 0, 100),
-  Sphere.create(
-    (Canvas.canvas.width * 7) / 10,
-    Canvas.canvas.height / 2,
-    0,
-    125,
-    18
-  ),
-  Mobius.create(
-    (Canvas.canvas.width * 9) / 10,
+  Axis.create((Canvas.canvas.width * 1) / 5, Canvas.canvas.height / 2, 0, 100),
+  Geodesic.create(
+    (Canvas.canvas.width * 3) / 5,
     Canvas.canvas.height / 2,
     0,
     100

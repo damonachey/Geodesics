@@ -30,6 +30,14 @@ export const Vector3 = {
     return { x: v.x * len2, y: v.y * len2, z: v.z * len2 };
   },
 
+  distance(v1, v2) {
+    const num = v1.x - v2.x;
+    const num2 = v1.y - v2.y;
+    const num3 = v1.z - v2.z;
+    const x2 = num * num + num2 * num2 + num3 * num3;
+    return Math.sqrt(x2);
+  },
+
   subtract(v1, v2) {
     return { x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z };
   },
