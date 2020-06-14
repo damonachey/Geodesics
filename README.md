@@ -1,2 +1,0 @@
-# Geodesics
-Created with CodeSandbox
