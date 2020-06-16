@@ -10,10 +10,10 @@ export const Geodesic = {
     const bots = [];
 
     const π = 3.1415927; //Math.PI;
-    const epsilon = 0.01;
+    const epsilon = 0.001;
 
     {
-      const count = 5;
+      const count = 4;
       const r = 1;
       const sr = 0.999;
       const x = sr;
@@ -30,14 +30,20 @@ export const Geodesic = {
 
       let distance = 0;
       let last = Vector3.one;
+      let safety = 0;
+      const Θ = 0.001;
 
       while (Math.abs(last.x) > epsilon || Math.abs(last.z) > epsilon) {
         for (let i = 0; i < bots.length; i++) {
-          const i2 = (i + 1) % bots.length;
           const a = bots[i][bots[i].length - 1];
-          const b = bots[i2][bots[i2].length - 1];
+          let b;
+
+          if (i < bots.length - 1) {
+            b = bots[i + 1][bots[i + 1].length - 1];
+          } else {
+            b = bots[0][bots[0].length - 2];
+          }
           const n = Vector3.normalize(Vector3.cross(a, b));
-          const Θ = (2 * π) / 1000;
           const q = Quaternion.createFromAxisAngle(n, Θ);
           const p = Vector3.transform(a, q);
 
@@ -46,15 +52,13 @@ export const Geodesic = {
           last = p;
           bots[i].push(p);
         }
-      }
 
-      console.log(bots[0].length, last);
-      console.log([
-        bots[0][bots[0].length - 1],
-        bots[1][bots[1].length - 1],
-        bots[2][bots[2].length - 1]
-      ]);
-      console.log(distance, distance * bots.length);
+        safety++;
+
+        if (safety > 300000) {
+          break;
+        }
+      }
     }
 
     shape.transform = function(q) {

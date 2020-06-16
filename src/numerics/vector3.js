@@ -24,10 +24,10 @@ export const Vector3 = {
   },
 
   normalize(v) {
-    const len = this.length(v);
-    const len2 = 1 / len;
+    const x = v.x * v.x + v.y * v.y + v.z * v.z;
+    const num = Math.sqrt(x);
 
-    return { x: v.x * len2, y: v.y * len2, z: v.z * len2 };
+    return { x: v.x / num, y: v.y / num, z: v.z / num };
   },
 
   distance(v1, v2) {
