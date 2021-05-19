@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { Game } from "./game";
+import { Game } from "./game.js";
 import { Canvas } from "./canvas";
 
 import { Shape } from "./shapes/shape";
