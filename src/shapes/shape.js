@@ -1,4 +1,4 @@
-import { Vector3 } from "../numerics/vector3";
+import { Vector3 } from "../numerics/vector3.js";
 
 export const Shape = {
   id: 0,
