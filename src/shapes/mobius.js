@@ -1,4 +1,4 @@
-import { Shape } from "./shape";
+import { Shape } from "./shape.js";
 
 export const Mobius = {
   create(x, y, z, size) {
