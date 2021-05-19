@@ -1,5 +1,5 @@
-import { Shape } from "./shape";
-import { Vector3 } from "../numerics/vector3";
+import { Shape } from "./shape.js";
+import { Vector3 } from "../numerics/vector3.js";
 
 export const Cone = {
   create(x, y, z, size, smoothing = 18) {
