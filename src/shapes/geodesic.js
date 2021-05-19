@@ -1,6 +1,6 @@
-import { Shape } from "./shape";
-import { Vector3 } from "../numerics/vector3";
-import { Quaternion } from "../numerics/quaternion";
+import { Shape } from "./shape.js";
+import { Vector3 } from "../numerics/vector3.js";
+import { Quaternion } from "../numerics/quaternion.js";
 
 export const Geodesic = {
   create(x, y, z, size) {
