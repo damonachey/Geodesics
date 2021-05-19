@@ -1,5 +1,5 @@
 // this code ported from C# System.Numerics.Matrix4x4
-import { Vector3 } from "./vector3";
+import { Vector3 } from "./vector3.js";
 
 export const Matrix4x4 = {
   createLookAt(v1, v2, up) {
