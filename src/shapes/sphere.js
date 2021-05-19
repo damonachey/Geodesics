@@ -1,4 +1,4 @@
-import { Shape } from "./shape";
+import { Shape } from "./shape.js";
 
 export const Sphere = {
   create(x, y, z, size, smoothing = 18) {
