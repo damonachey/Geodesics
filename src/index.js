@@ -1,5 +1,3 @@
-import "./styles.css";
-
 import { Game } from "./game.js";
 import { Canvas } from "./canvas.js";
 
