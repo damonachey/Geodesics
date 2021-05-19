@@ -1,21 +1,21 @@
 import "./styles.css";
 
 import { Game } from "./game.js";
-import { Canvas } from "./canvas";
+import { Canvas } from "./canvas.js";
 
-import { Shape } from "./shapes/shape";
-import { Axis } from "./shapes/axis";
-import { Cone } from "./shapes/cone";
-import { Cube } from "./shapes/cube";
-import { Sphere } from "./shapes/sphere";
-import { Mobius } from "./shapes/mobius";
-import { Geodesic } from "./shapes/geodesic";
+import { Shape } from "./shapes/shape.js";
+import { Axis } from "./shapes/axis.js";
+import { Cone } from "./shapes/cone.js";
+import { Cube } from "./shapes/cube.js";
+import { Sphere } from "./shapes/sphere.js";
+import { Mobius } from "./shapes/mobius.js";
+import { Geodesic } from "./shapes/geodesic.js";
 
-import { Utilities } from "./utilities";
-import { Geometry } from "./geometry";
-import { Quaternion } from "./numerics/quaternion";
-import { Matrix4x4 } from "./numerics/matrix4x4";
-import { Vector3 } from "./numerics/vector3";
+import { Utilities } from "./utilities.js";
+import { Geometry } from "./geometry.js";
+import { Quaternion } from "./numerics/quaternion.js";
+import { Matrix4x4 } from "./numerics/matrix4x4.js";
+import { Vector3 } from "./numerics/vector3.js";
 
 function draw() {
   Canvas.clear("#444");
